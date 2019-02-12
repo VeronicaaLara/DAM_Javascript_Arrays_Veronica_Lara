@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+<script>
+	var cadena = prompt("escribe un texto");
+
+	var longitud = cadena.length;
+		cadena = cadena.toLowerCase();
+
+	var letra;
+	var resul = "";
+	var original = "";
+	var invertida = "";
+
+
+		for (var i = 0; i < longitud; i++) {
+			letra = cadena.charAt(i);
+	                
+			if (letra != " ") {
+				original += letra;
+				invertida = letra + invertida;
+			}
+		}
+		if (original == invertida) {
+
+			document.write("es palindromo");
+		}else {
+
+			document.write("no es palindromo");
+		}
+	
+
+</script>
+</body>
+</html>

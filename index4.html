@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+	<script>
+		
+		var valores = [true, 5, false, "hola", "adios", 2];
+
+		var palabras = new Array();
+		var num = new Array();
+		var bool = new Array();
+
+		for(var i = 0; i < valores.length; i++){
+
+			if(typeof valores[i] == "boolean"){
+				bool.push(valores[i]);
+			}
+			if(typeof valores[i] == "numero"){
+				num.push(valores[i]);
+			}
+			if(typeof valores[i] == "string"){
+				palabras.push(valores[i]);
+			}
+		}
+		
+		function comparacion (palabras){
+
+			var palabraLarga ="";
+
+			for(var i = 0; i < palabras.length; i++){
+
+				if(palabras[i].length > palabraLarga.length){
+					palabraLarga = palabras[i];
+				}
+			}
+			return palabraLarga;
+		}
+
+		var palabraLarga = comparacion (palabras);
+
+		document.write ("La palabra mas larga " + palabraLarga);
+
+		var t_bool = valores[0] || valores[2];
+		document.write ("<br>"+ t_bool);
+
+		var f_bool = valores[0] && valores[2];
+		document.write ("<br>"+ f_bool);
+
+		var suma = 0;
+		for (var i=0; i<num.length; i++){
+			suma = suma + num[i]
+		}
+		document.write("<br>"+ suma);
+		var resta = 0;
+		for(var i = 0; i < num.length; i++){
+			if (resta == 0){
+				resta = num[i];
+			}else{
+				resta = resta - num[i]
+			}
+		}
+
+		document.write("<br>"+resta);
+		var multiplicar = 0;
+		for(var i = 0; i < num.length; i++){
+			if (multiplicar == 0){
+				multiplicar = num[i];
+			}else{
+				multiplicar = multiplicar * num[i];
+			}			
+		}
+		document.write("<br>"+ multiplica);
+		var divide = 0;
+		for(var i = 0; i < num.length; i++){
+			if (dividir ==0){
+				dividir = num[i];
+			}else{
+				dividir = dividir / num[i];
+			}
+		}
+
+		document.write ("<br>" + dividir);
+		var total = 0;
+		for (var i = 0; i < num.length; i++){
+
+
+			if (total == 0){
+				total = num[i];
+			}else{
+				total = total % num[i];
+			}
+		}
+
+		document.write("<br>"+ total);
+
+		
+	</script>
+</body>
+</html>
